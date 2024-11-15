@@ -1,7 +1,7 @@
 <h1>This is a test</h1>
 <ul>
 <%@lists.each do |list| %>
-<li><%= link_to list.name, list_path(list) %></li>
+<li><%= link_to list.name, root_path(list) %></li>
 <%end%>
 </ul>
 
