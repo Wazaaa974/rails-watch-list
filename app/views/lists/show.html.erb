@@ -10,7 +10,7 @@
 
 <div class="container my-5">
   <!-- Banner Section -->
-  <div class="banner text-white text-center py-5 mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png); background-size: cover;">
+  <div> <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %> </div>
     <h1><%= @list.name %></h1>
   </div>
 
