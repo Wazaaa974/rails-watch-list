@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container my-5">
+  <!-- Banner Section -->
+  <div class="banner text-white text-center py-5 mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png); background-size: cover;">
+    <h1><%= @list.name %></h1>
+  </div>
+
+  <!-- Movie Cards Section -->
+  <div class="row g-4">
+    <% @list.movies.each do |movie| %>
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="<%= movie.poster_url %>" class="card-img-top" alt="<%= movie.title %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= movie.title %></h5>
+            <p class="card-text"><%= movie.overview %></p>
+            <p class="card-text"><strong>Rating:</strong> <%= movie.rating %></p>
+          </div>
+          <div class="card-footer">
+            <%= link_to "Delete this movie", bookmark_path(movie.bookmark_ids), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this movie?"}, class: "btn btn-danger" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Navigation Links -->
+  <div class="mt-4">
+    <%= link_to "Go back to lists", lists_path, class: "btn btn-secondary me-2" %>
+    <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
