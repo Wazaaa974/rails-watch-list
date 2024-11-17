@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie List</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
 
+ <!-- Banner Section -->
+<div class = row>
+  <div class="container col my-5 d-flex justify-content-center align-items-center flex-column text-center">
 
-
-<div class="container my-5">
-  <!-- Banner Section -->
-  <%if @list.photo.attached?%>
-   <div> <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %> </div>
-   <% else %>
-   <div> <%= cl_image_tag "samples/logo", height: 300, width: 400, crop: :fill %> </div>
-   <% end %>
-    <h1><%= @list.name %></h1>
+    <%if @list.photo.attached?%>
+    <div> <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %> </div>
+    <% else %>
+    <div> <%= cl_image_tag "samples/logo", height: 300, width: 400, crop: :fill %> </div>
+    <% end %>
+      <h1><%= @list.name %></h1>
+    </div>
   </div>
 
   <!-- Movie Cards Section -->
@@ -46,6 +38,7 @@
   </div>
 </div>
 
+  <!-- Footer  -->
 <div class="footer">
   <div class="footer-links">
     <a href="https://github.com/Wazaaa974"><i class="fab fa-github"></i></a>
@@ -57,7 +50,4 @@
 </div>
 
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
