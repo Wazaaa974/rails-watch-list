@@ -1,6 +1,28 @@
+<!-- Banner  -->
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(https://img.freepik.com/free-photo/girl-enjoying-nice-soft-sound-headphones-cheerful-romantic-delighted-pretty-redhead-woman-til_1258-126223.jpg?t=st=1731683049~exp=1731686649~hmac=04b4aa8a8f1b0018b72e8241a3aa23e60f7caff1534e916c8957fc4fe46b9123&w=1800);">
+  <div class="container">
+    <h1 class = "text-white" > Welcome to the <strong>watch-list</strong> </h1>
+    <p class = "text-white" >Bookmark your movies to your lists !</p>
+  </div>
+</div>
+
+
 <h1>This is the view for new Bookmark</h1>
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
   <%= f.association :movie %>
   <%= f.button :submit %>
 <% end %>
+
+
+<!-- Footer  -->
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/Wazaaa974"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/wazaaa974/"><i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made by the notorious <i class="fas fa-heart"></i> Thomas ALONSO <i class="fas fa-heart"></i>
+  </div>
+</div>

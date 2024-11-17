@@ -1,6 +1,29 @@
-<h1>This is the page to create a list</h1>
+ <!-- Banner Section -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(https://img.freepik.com/free-photo/girl-enjoying-nice-soft-sound-headphones-cheerful-romantic-delighted-pretty-redhead-woman-til_1258-126223.jpg?t=st=1731683049~exp=1731686649~hmac=04b4aa8a8f1b0018b72e8241a3aa23e60f7caff1534e916c8957fc4fe46b9123&w=1800);">
+  <div class="container">
+    <h1 class = "text-white" > Create your own <strong>watch-list</strong> </h1>
+    <p class = "text-white" > Make your list and bookmark the movies you like the most </p>
+  </div>
+</div>
+
+<div>
 <%= simple_form_for [@list] do |f| %>
   <%= f.input :name %>
   <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn btn-secondary me-2 mb-2" %>
 <% end %>
+</div>
+<%= link_to "Go back to lists", root_path, class: "btn btn-secondary me-2" %>
+
+
+
+<!-- Footer  -->
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/Wazaaa974"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/wazaaa974/"><i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made by the notorious <i class="fas fa-heart"></i> Thomas ALONSO <i class="fas fa-heart"></i>
+  </div>
+</div>
