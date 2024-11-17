@@ -8,6 +8,8 @@
 </head>
 <body>
 
+
+
 <div class="container my-5">
   <!-- Banner Section -->
   <%if @list.photo.attached?%>
@@ -21,7 +23,7 @@
   <!-- Movie Cards Section -->
   <div class="row g-4">
     <% @list.movies.each do |movie| %>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="card h-100">
           <img src="<%= movie.poster_url %>" class="card-img-top" alt="<%= movie.title %>">
           <div class="card-body">
@@ -43,6 +45,18 @@
     <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
   </div>
 </div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/Wazaaa974"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/wazaaa974/"><i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made by the notorious <i class="fas fa-heart"></i> Thomas ALONSO <i class="fas fa-heart"></i>
+  </div>
+</div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
